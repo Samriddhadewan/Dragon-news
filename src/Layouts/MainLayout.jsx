@@ -2,6 +2,7 @@ import Category from "../Components/Category";
 import Header from "../Components/Header";
 import LatestNews from "../Components/LatestNews";
 import Navbar from "../Components/Navbar";
+import RightSide from "../Components/RightSide";
 
 const MainLayout = () => {
   return (
@@ -18,12 +19,14 @@ const MainLayout = () => {
         <Navbar />{" "}
       </nav>
       {/* main  */}
-      <main className="w-[1140px] my-7 mx-auto grid grid-cols-12">
+      <main className="w-[1140px] my-7 mx-auto grid grid-cols-12 gap-4">
         <aside className="col-span-3 ">
           <Category></Category>
         </aside>
         <section className="col-span-6 ">main section</section>
-        <aside className="col-span-3 ">right side</aside>
+        <aside className="col-span-3 ">
+          <RightSide></RightSide>
+        </aside>
       </main>
     </div>
   );
