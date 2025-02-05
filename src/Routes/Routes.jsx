@@ -1,10 +1,23 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter, Navigate } from "react-router-dom"
 import MainLayout from "../Layouts/MainLayout"
+import CategoryData from "../Components/CategoryData"
 
 const Routes = createBrowserRouter([
     {
         path: "/",
-        element: <MainLayout />
+        element: <MainLayout />,
+        children: [ 
+            {
+              path: "",
+              element: <Navigate to={"category/01"} />
+
+            },
+            {
+            path: "category/:id",
+            element: <CategoryData></CategoryData>,
+            loader: ({params})=> fetch(`https://openapi.programming-hero.com/api/news/category/${params.id}`)
+            }
+    ]
     },
     {
         path: "/news",

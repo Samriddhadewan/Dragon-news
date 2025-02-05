@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Category from "../Components/Category";
 import Header from "../Components/Header";
 import LatestNews from "../Components/LatestNews";
@@ -23,7 +24,9 @@ const MainLayout = () => {
         <aside className="col-span-3 ">
           <Category></Category>
         </aside>
-        <section className="col-span-6 ">main section</section>
+        <section className="col-span-6 ">
+          <Outlet />
+        </section>
         <aside className="col-span-3 ">
           <RightSide></RightSide>
         </aside>
