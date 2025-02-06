@@ -33,7 +33,14 @@ const Register = () => {
           <br />
           <input type="password" placeholder="Enter Password" className="w-full input input-bordered" required /> <br />
         </div>
-        <div className="form-control mt-6">
+
+        <div className="form-control">
+  <label className="label cursor-pointer">
+  <input type="checkbox"  className="checkbox" />
+    <span className="label-text">Accept Term & Conditions</span>
+  </label>
+</div>
+        <div className="form-control mt-2">
           <button className="btn  w-full text-white border-none bg-[#403F3F]">Register</button>
         </div>
         
