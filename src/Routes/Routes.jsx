@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout"
 import CategoryData from "../Components/CategoryData"
 import AuthLayout from "../Layouts/AuthLayout"
 import LoginPage from "../Components/LoginPage"
+import Register from "../Components/Register"
 
 const Routes = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path:"/auth/register",
-                element: <h1>Register</h1>
+                element: <Register />
             },
         ]
     },
