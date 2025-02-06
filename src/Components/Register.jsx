@@ -12,13 +12,13 @@ const Register = () => {
           <label className="label">
             <span className="label-text text-[#403F3F] font-bold my-3 text-base">Name</span>
           </label><br />
-          <input type="email" placeholder="Enter Email Address" className="input input-bordered w-full" required />
+          <input type="email" placeholder="Enter Name" className="input input-bordered w-full" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text text-[#403F3F] font-bold my-3 text-base">Photo URL</span>
           </label><br />
-          <input type="email" placeholder="Enter Email Address" className="input input-bordered w-full" required />
+          <input type="email" placeholder="Enter Phot URL" className="input input-bordered w-full" required />
         </div>
         <div className="form-control">
           <label className="label">
@@ -43,7 +43,7 @@ const Register = () => {
         <div className="form-control mt-2">
           <button className="btn  w-full text-white border-none bg-[#403F3F]">Register</button>
         </div>
-        
+        <p className="text-center pt-3">All ready Have An Account ? <Link to={'/auth/login'} className="text-[#F75B5F]">Log in</Link></p>
       </form>
     </div>
     </div>
