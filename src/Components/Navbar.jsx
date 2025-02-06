@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="flex items-center justify-between">
         <div></div>
         <div className="flex text-[#706F6F] gap-3">
-            <Link>Home</Link>
+            <Link to={"/"}>Home</Link>
             <Link>About</Link>
             <Link>Career</Link>
         </div>
@@ -14,7 +14,7 @@ const Navbar = () => {
             <div>
                 <img src={profile} alt="" />
             </div>
-            <button className="bg-[#403F3F] text-white py-3 px-7 rounded-sm">Login</button>
+            <Link to="/auth/login" className="bg-[#403F3F] text-white py-3 px-7 rounded-sm">Login</Link>
         </div>
     </div>
   )

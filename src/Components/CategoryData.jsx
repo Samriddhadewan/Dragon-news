@@ -3,7 +3,6 @@ import NewsCard from "./NewsCard";
 
 const CategoryData = () => {
     const {data:news} = useLoaderData();
-    console.log(news);
   return (
     <div>
         <div className="space-y-5">
