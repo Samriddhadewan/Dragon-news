@@ -20,11 +20,12 @@ const AuthProvider = ({children}) => {
         return ()=> {
             unSubscribe()
         }
-    },[])
+    },[auth])
     
     const AuthInfo = {
         handleSignUp,
-        setUser
+        setUser,
+        user
     }
 
   return (
