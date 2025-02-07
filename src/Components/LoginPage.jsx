@@ -1,9 +1,10 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom"
 import { AuthContext } from "../Provider/AuthProvider"
 
 const LoginPage = () => {
   const {handleSignIn, setUser} = useContext(AuthContext);
+  const [error, setError] = useState({})
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location)
@@ -19,10 +20,8 @@ const LoginPage = () => {
       setUser(result.user);
       navigate(location?.state ? (location.state) : "/" )
     })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorCode, errorMessage)
+    .catch((err) => {
+      setError({...error, login:err.code})
     });
 
   }
@@ -51,6 +50,11 @@ const LoginPage = () => {
           name="password"
           type="password" placeholder="Enter Password" className="w-full input input-bordered" required /> <br />
         </div>
+        {
+          error.login && <label className="label">
+          <span className="label-text text-red-700  my-3 text-base">{error.login}</span>
+        </label>
+        }
         <div className="form-control mt-6">
           <button className="btn  w-full text-white border-none bg-[#403F3F]">Login</button>
         </div>
