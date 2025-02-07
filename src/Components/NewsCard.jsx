@@ -1,4 +1,5 @@
 import { FaRegEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NewsCard = (props = {}) => {
   const { news } = props || {};
@@ -32,7 +33,7 @@ const NewsCard = (props = {}) => {
         {news.details.length > 100
           ? `${news.details.substring(0, 100)}...`
           : news.details}
-        <span className="text-blue-600 cursor-pointer"> Read More</span>
+        <Link to={`/news/${news._id}`} className="text-blue-600 cursor-pointer"> Read More</Link>
       </p>
 
       {/* Footer */}

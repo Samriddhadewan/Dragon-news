@@ -4,6 +4,7 @@ import CategoryData from "../Components/CategoryData"
 import AuthLayout from "../Layouts/AuthLayout"
 import LoginPage from "../Components/LoginPage"
 import Register from "../Components/Register"
+import NewsPage from "../Pages/NewsPage"
 
 const Routes = createBrowserRouter([
     {
@@ -12,16 +13,17 @@ const Routes = createBrowserRouter([
         children: [ 
             {
               path: "",
-              element: <Navigate to={"category/01"} />
-
+              element: <Navigate to={"/category/01"} />
             },
             {
-            path: "category/:id",
+            path: "/category/:id",
             element: <CategoryData></CategoryData>,
-            loader: ({params})=> fetch(`https://openapi.programming-hero.com/api/news/category/${params.id}`)
-            }
-    ]
+            loader: ({params})=> fetch(`https://openapi.programming-hero.com/api/news/category/${params.id}`
+            ),
+            },
+    ],
     },
+
     {
         path: "/auth",
         element: <AuthLayout />,
@@ -36,6 +38,12 @@ const Routes = createBrowserRouter([
             },
         ]
     },
+    {
+        path: "/news/:id",
+        element: <NewsPage />,
+        loader: ({params})=> fetch(`https://openapi.programming-hero.com/api/news/${params.id}`)
+    },
+
 ]) 
 
 export default Routes
