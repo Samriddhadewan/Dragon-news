@@ -12,7 +12,7 @@ const NewsPage = () => {
         </header>
         <main className="grid gap-4 grid-cols-12">
             <div className="col-span-9 ">
-                <h1>dragon News</h1>
+                <h1 className="text-[#403F3F] font-semibold text-xl">Dragon News</h1>
                 <NewsDetails data={data} />
             </div>
             <div className="col-span-3 ">

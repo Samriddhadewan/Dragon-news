@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa6";
+
 
 const NewsDetails = ({data}) => {
     const {image_url,title, details} = data[0];
@@ -14,7 +16,7 @@ const NewsDetails = ({data}) => {
     <h2 className="card-title py-2">{title}</h2>
     <p>{details}</p>
 
-    <Link to="/category/01" className="btn btn-primary py-4">Back</Link>
+    <Link to="/category/01" className="btn my-4 bg-[#D72050] text-white font-normal text-base  py-4"><FaArrowLeft /> All news in this category</Link>
   </div>
 </div>
   )
