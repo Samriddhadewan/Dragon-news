@@ -19,7 +19,15 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-3">
             <div>
-                <img src={profile} alt="" />
+              {
+                user && user?.email ? 
+                <div className="flex items-center">
+                  <img className="w-20 " src={user.photoURL} alt="" />
+                  <p>{user.displayName}</p>
+                </div>
+                : <img src={profile} alt="" />
+              }
+                
             </div>
             <div>
               {

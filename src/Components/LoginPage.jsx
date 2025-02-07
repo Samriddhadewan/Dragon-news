@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom"
+import { Link,  useLocation, useNavigate } from "react-router-dom"
 import { AuthContext } from "../Provider/AuthProvider"
 
 const LoginPage = () => {
