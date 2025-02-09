@@ -16,8 +16,7 @@ const Register = () => {
 
         
         handleSignUp(email, password)
-        .then((result) =>{
-            console.log(result.user);
+        .then(() =>{
             handleUpdate({
               displayName:name,
               photoURL: photo
@@ -25,16 +24,15 @@ const Register = () => {
             .then(()=> {
               navigate("/");
             })
-            .catch(error => console.log(error));
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorCode, errorMessage);    
+            // console.log(errorCode, errorMessage);    
           });
 
 
-        console.log({name,photo,email,password});
+        // console.log({name,photo,email,password});
     }
 
 
